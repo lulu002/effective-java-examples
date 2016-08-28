@@ -1,6 +1,11 @@
 // Builder Pattern - Pages 14-15
 package org.effectivejava.examples.chapter02.item02.builder;
 
+/**
+ * 该代码用于生成自定义的构造函数。更为优雅。
+ * @author minjianying
+ *
+ */
 public class NutritionFacts {
 	private final int servingSize;
 	private final int servings;
@@ -50,6 +55,10 @@ public class NutritionFacts {
 		}
 	}
 
+	/**
+	 * 构造函数只接收builder类型，builder静态类进行属性的赋值。
+	 * @param builder
+	 */
 	private NutritionFacts(Builder builder) {
 		servingSize = builder.servingSize;
 		servings = builder.servings;
@@ -58,9 +67,17 @@ public class NutritionFacts {
 		sodium = builder.sodium;
 		carbohydrate = builder.carbohydrate;
 	}
+	
+	public void showAttribute() {
+		System.out.println(servings);
+		System.out.println(calories);
+		System.out.println(fat);
+	}
 
 	public static void main(String[] args) {
 		NutritionFacts cocaCola = new NutritionFacts.Builder(240, 8)
 				.calories(100).sodium(35).carbohydrate(27).build();
+		
+		cocaCola.showAttribute();
 	}
 }
