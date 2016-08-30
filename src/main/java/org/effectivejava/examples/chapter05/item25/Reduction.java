@@ -42,6 +42,14 @@ public class Reduction {
 			return Math.min(i1, i2);
 		}
 	};
+	
+	private static final Function<Integer> ADD =new Function<Integer>() {
+		
+		@Override
+		public Integer apply(Integer arg1, Integer arg2) {
+			return arg1+arg2;
+		}
+	};
 
 	public static void main(String[] args) {
 		List<Integer> intList = Arrays.asList(2, 7, 1, 8, 2, 8, 1, 8, 2, 8);

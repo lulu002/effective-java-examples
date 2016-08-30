@@ -7,5 +7,6 @@ public class Super {
 	}
 
 	public void overrideMe() {
+		System.out.println("super");
 	}
 }

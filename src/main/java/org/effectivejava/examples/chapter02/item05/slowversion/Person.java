@@ -5,6 +5,12 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.TimeZone;
 
+/**
+ * 这个例子就是很好的展示了创建多个非必要对象的。boomStart，boomEnd每调用一次方法创建一次。
+ * 参考上一个代码，它是更好的方法。
+ * @author minjianying
+ *
+ */
 public class Person {
 	private final Date birthDate;
 
