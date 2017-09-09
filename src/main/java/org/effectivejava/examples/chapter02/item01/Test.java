@@ -37,6 +37,7 @@ public class Test {
 			};
 		}
 	};
+	
 
 	private static Provider COMP_PROVIDER = new Provider() {
 		public Service newService() {

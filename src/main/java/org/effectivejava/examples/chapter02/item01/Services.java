@@ -16,6 +16,7 @@ public class Services {
 
 	/**
 	 * 注册默认服务
+	 * 
 	 * @param p
 	 */
 	public static void registerDefaultProvider(Provider p) {
